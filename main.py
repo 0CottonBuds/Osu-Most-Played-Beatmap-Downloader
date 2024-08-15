@@ -12,7 +12,7 @@ def download_single_beatmap(beatmap_id, song_title):
     "Sec-Fetch-Site": "same-origin",
     "Sec-Fetch-User": "?1",
     "Upgrade-Insecure-Requests": "1"}
-    response: requests.Response = requests.get(f"https://api.chimu.moe/v1/download/{beatmap_id}?n=1", allow_redirects=True)
+    response: requests.Response = requests.get(f"https://api.nerinyan.moe/d/{beatmap_id}?noVideo=true", allow_redirects=True)
 
     if not response.status_code == 200:
         print(f"API ERROR:{response.status_code} \nFailed to download {beatmap_id}, {song_title}." )
